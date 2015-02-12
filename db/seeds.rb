@@ -366,8 +366,6 @@ Whippet
 Wirehaired solvakian pointer
 Xoloitzcuintle
 Yorkshire terrier
-
-
 )
 
 breed.each do |r|

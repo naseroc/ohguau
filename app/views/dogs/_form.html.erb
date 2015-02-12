@@ -15,45 +15,59 @@
     <%= f.label :name %><br>
     <%= f.text_field :name %>
   </div>
-  <div class="field">
-    <%= f.label :breed %><br>
-    <%= f.text_field :breed %>
-  </div>
-  <div class="field">
-    <%= f.label :age %><br>
-    <%= f.number_field :age %>
-  </div>
-  <div class="field">
-    <%= f.label :size %><br>
-    <%= f.text_field :size %>
-  </div>
-  <div class="field">
-    <%= f.label :sex %><br>
-    <%= f.text_field :sex %>
-  </div>
-  <div class="field">
-    <%= f.label :description %><br>
-    <%= f.text_area :description %>
-  </div>
-  <div class="field">
-    <%= f.label :city %><br>
+   <div class="field">
+    <%= f.label :Ciudad %><br>
     <%= f.text_field :city %>
   </div>
   <div class="field">
-    <%= f.label :commune %><br>
-    <%= f.text_field :commune %>
+    <%= f.label :Comuna %><br>
+   <%= select_tag(:commune, options_for_select([['Santiago' , 1], ['Cerrillos' , 2], ['Cerro Navia' , 3], ['Conchalí' , 4], ['El Bosque' , 5], ['Estación Central' , 6], ['Huechuraba' , 7], ['Independencia' , 8], ['La Cisterna', 9], ['La Florida' , 10], ['La Granja' , 11], ['La Pintana' , 12], ['La Reina' , 13], ['Las Condes' , 14], ['Lo Barnechea' , 15], ['Lo Espejo' , 16], ['Lo Prado' , 17], ['Macul' , 18], ['Maipú' , 19], ['Ñuñoa' , 20], ['Pedro Aguirre Cerda' , 21], ['Peñalolén' , 22], ['Providencia' , 23], ['Pudahuel' , 24], ['Quilicura' , 25], ['Quinta Normal' , 26], ['Recoleta' , 27], ['Renca' , 28], ['San Joaquín' , 29], ['San Miguel' , 30], ['San Ramón' , 31], ['Vitacura' , 32]
+   ])) %>
+</div>
+
+  <div class="field">
+    <%= f.label :sex %><br>
+    <%= select_tag(:sex, options_for_select([['Hembra'], ['Macho']])) %>
+    
+  </div>
+  <div class="field">
+    <%= f.label :breed %><br>
+     <%= select_tag(:breed, options_for_select([['Selecciona una raza' , 1], ['Quiltro' , 2], ['--' , 3], ['Affenpinscher' , 4], ['Airedale Terrier' , 5], ['Akita' , 6], ['Akita americano' , 7], ['Alano español' , 8], ['Alaska malamute' , 9], ['Alaskan Husky' , 10], ['American Foxhound' , 11], ['American pit bull terrier' , 12], ['American stanfforshire terrier' , 13], ['Ariegeois' , 14], ['Artois' , 15], ['Australian silky terrier' , 16], ['Australian terrier' , 17], ['Austrian Black & Tan Hound' , 18], ['Azawakh' , 19], ['Balkan Hound' , 20], ['Basenji' , 21], ['Basset Alpino (Alpine Dachsbracke)' , 22], ['Basset Artesiano Normando' , 23], ['Basset Azul de Gascuña (Basset Bleu de Gascogne)' , 24], ['Basset de Artois' , 25], ['Basset de Westphalie' , 26], ['Basset Hound' , 27], ['Basset Leonado de Bretaña (Basset fauve de Bretagne)' , 28], ['Bavarian Mountain Scenthound' , 29], ['beagle' , 30], ['Beagle Harrier' , 31], ['Beauceron' , 32], ['Bedlington Terrier' , 33], ['Bichón boloñés' , 34], ['Bichón frisé' , 35], ['Bichón habanero' , 36], ['Bichón maltés' , 37], ['Billy' , 38], ['Black and Tan Coonhound' , 39], ['Black and Tan Coonhound' , 39], ['Bloodhound (Sabueso de San Huberto)' , 40], ['Bobtail' , 41], ['Boerboel' , 42], ['Border Collie' , 43], ['Border Terrier' , 44], ['Borzoi' , 45], ['Bosnian Hound' , 46], ['Boston Terrier' , 47], ['Bouvier des Flandres' , 48], ['Boxer' , 49], ['Boyero australiano' , 50], ['Boyero de Appenzell' , 51], ['Boyero de Entlebuch' , 52], ['Boyero de las Ardenas' , 53], ['Boyero de Montaña Bernes' , 54], ['Braco Alemán de pelo corto' , 55], ['Braco Alemán de pelo duro' , 56], ['Braco de Ariege' , 57], ['Braco de Auvernia' , 58], ['Braco de Bourbonnais' , 59], ['Braco de Saint Germain' , 60], ['Braco Dupuy' , 61], ['Braco Francés' , 62], ['Braco Italiano' , 63], ['Broholmer' , 64], ['Buhund Noruego' , 65], ['Bull terrier' , 66], ['Bulldog' , 67], ['Bulldog americano' , 68], ['Bulldog francés' , 69], ['Bullmastiff' , 70], ['Ca de Bestiar' , 71], ['Cairn terrier' , 72], ['Cane Corso' , 73], ['Cane da Pastore Maremmano-Abruzzese' , 74], ['caniche' , 75], ['Cao da Serra de Aires' , 76], ['Cao da Serra de Estrela' , 77], ['Cao de Castro Laboreiro' , 78], ['Cao de Fila de Sao Miguel' , 79], ['Catalburun' , 80], ['Cavalier King Charles Spaniel' , 81], ['Cesky Fousek' , 82], ['Ceský teriér' , 83], ['Chesapeake Bay Retriever' , 84], ['Chihuahua' , 85], ['Chin' , 86], ['Chow Chow' , 87], ['Cirneco del Etna' , 88], ['Clumber Spaniel' , 89], ['Cocker Spaniel Americano' , 90], ['Cocker Spaniel Inglés' , 91], ['Collie Barbudo' , 92], ['Collie pelo corto' , 93], ['Collie pelo largo' , 94], ['Coton de Tuléar' , 95], ['Curly Coated Retriever' , 96], ['Dálmata' , 97], ['Dandie dinmont terrier' , 98], ['Deerhound' , 99], ['Dobermann' , 100], ['Dogo Argentino' , 101], ['Dogo de Burdeos' , 102], ['Dogo del Tibet' , 103], ['Drentse Partridge Dog' , 104], ['Drever' , 105], ['Dunker' , 106], ['Elkhound Noruego' , 107], ['Elkhound Sueco' , 108], ['English Foxhound' , 109], ['English Springer Spaniel' , 110], ['English toy terrier' , 111], ['Epagneul Picard' , 112], ['Eurasier' , 113], ['Fila Brasileiro' , 114], ['Finnish Lapphound' , 115], ['Flat Coated Retriever' , 116], ['Fox terrier de pelo de alambre' , 117], ['Fox terrier de pelo liso' , 118], ['Foxhound Inglés' , 119], ['Frisian Pointer' , 120], ['Galgo español' , 121], ['Galgo húngaro (Magyar Agar)' , 122], ['Galgo Italiano' , 123], ['Galgo Polaco (Chart Polski)' , 124], ['Glen of Imaal Terrier' , 125], ['Golden Retriever' , 126], ['Gordon Setter' , 127], ['Gos d"Atura Catalá' , 128], ['Gran Basset Griffon Vendeano' , 129], ['Gran Boyero Suizo' , 130], ['Gran Danés (Dogo Aleman)' , 131], ['Gran Gascón Saintongeois' , 132], ['Gran Griffon Vendeano' , 133], ['Gran Munsterlander' , 134], ['Gran Perro Japonés' , 135], ['Grand Anglo Francais Tricoleur' , 136], ['Grand Bleu de Gascogne' , 137], ['Greyhound' , 138], ['Griffon Bleu de Gascogne' , 139], ['Griffon de pelo duro (Grifón Korthals)' , 140], ['Griffon leonado de Bretaña' , 141], ['Griffon Nivernais' , 142], ['Grifón belga' , 143], ['Grifón de Bruselas' , 144], ['Haldenstoever' , 145], ['Harrier' , 146], ['Hokkaido' , 147], ['Hovawart' , 148], ['Husky siberiano' , 149], ['Ioujnorousskaia Ovtcharka' , 150], ['Irish Glen of Imaal terrier' , 151], ['Irish soft coated wheaten terrier' , 152], ['Irish terrier' , 153], ['Irish Water Spaniel' , 154], ['Irish wolfhound' , 155], ['Jack Russell terrier' , 156], ['Jindo Coreano' , 157], ['Keeshond' , 158], ['Kelpie Australiano (Australian Kelpie)' , 159], ['Kerry blue terrier' , 160], ['King Charles Spaniel' , 161], ['Kishu' , 162], ['klee klai alaskan' , 163], ['Komondor' , 164], ['Kooiker' , 165], ['Kromfohrländer' , 166], ['Kuvasz' , 167], ['Labrador Retriever' , 168], ['Lagotto Romagnolo' , 169], ['Laika de Siberia Occidental' , 170], ['Laika de Siberia Oriental' , 171], ['Laika Ruso Europeo' , 172], ['Lakeland terrier' , 173], ['Landseer' , 174], ['Lapphund Sueco' , 175], ['Lebrel Afgano' , 176], ['Lebrel Arabe (Sloughi)' , 177], ['Leonberger' , 178], ['Lhasa apso' , 179], ['Lowchen' , 180], ['Lundehund Noruego' , 181], ['Malamute de Alaska' , 182], ['Manchester terrier' , 183], ['Mastiff' , 184], ['Mastín de los Pirineos' , 185], ['Mastín Español' , 186], ['Mastín Napolitano' , 187], ['Mudi' , 188], ['Norfolk terrier' , 189], ['Norwich terrier' , 190], ['Nova Scotia duck tolling retriever' , 191], ['Otterhound' , 192], ['Ovejero alemán' , 193], ['Parson Russell terrier' , 194], ['Pastor Alemán' , 195], ['Pastor Australiano' , 196], ['Pastor Belga' , 197], ['Pastor Belga Groenendael' , 198], ['Pastor Belga Laekenois' , 199], ['Pastor Belga Malinois' , 200], ['Pastor Belga Tervueren' , 201], ['Pastor Bergamasco' , 202], ['Pastor blanco suizo (Berger Blanc Suisse)' , 203], ['Pastor catalán' , 204], ['Pastor Croata' , 205], ['Pastor de Anatolia' , 206], ['Pastor de Asia Central' , 207], ['Pastor de Brie' , 208], ['Pastor de Istria' , 209], ['Pastor de Laponia (Laponian Herder)' , 210], ['Pastor de los Pirineos de cara rasa' , 211], ['Pastor de los Pirineos de pelo largo' , 212], ['Pastor de Shetland' , 213], ['Pastor del Atlas (Aidi)' , 214], ['Pastor del Cáucaso' , 215], ['Pastor Holandés' , 216], ['Pastor Islandés' , 217], ['Pastor mallorquín' , 218], ['Pastor Picard' , 219], ['Pastor polaco de las llanuras' , 220], ['Pastor polaco de Podhale' , 221], ['Pastor Vasco' , 222], ['Pekinés' , 223], ['Pequeño brabanzón' , 224], ['Pequeño Munsterlander' , 225], ['Pequeño perro león' , 226], ['Perdiguero de Burgos' , 227], ['Perdiguero Portugués' , 228], ['Perro crestado chino' , 229], ['Perro de Agua Americano (American Water Spaniel)' , 230], ['Perro de Agua Español' , 231], ['Perro de Agua Francés (Barbet)' , 232], ['Perro de Agua Frisón' , 233], ['Perro de Agua Portugués' , 234], ['Perro de Canaan' , 235], ['Perro de Groenlandia' , 236], ['Perro de los Visigodos (Vastgotaspets)' , 237], ['Perro de Montaña de los Pirineos' , 238], ['Perro de Osos de Carelia (Karelian Bear Dog)' , 239], ['Perro de Presa Español' , 240], ['Perro de Presa Mallorquín (Ca de Bou)' , 241], ['Perro del Faraón' , 242], ['Perro Esquimal Americano (American Esquimo Dog)' , 243], ['Perro Esquimal Canadiense' , 244], ['Perro Lobo Checoslovaco' , 245], ['Perro sin pelo de Perú' , 246], ['Petit Basset Griffon Vendeen' , 247], ['Petit Blue de Gascogne' , 248], ['Pill bull terrier americano' , 249], ['Pinscher aleman o mediano' , 250], ['Pinscher austríaco de pelo corto' , 251], ['Pinscher Miniatura' , 252], ['Podenco Andaluz' , 253], ['Podenco Canario' , 254], ['Podenco Ibicenco' , 255], ['Podenco Portugués' , 256], ['Pointer' , 257], ['Poitevin' , 258], ['Pomerania' , 259], ['Porcelana' , 260], ['Presa Canario' , 261], ['Pug o carlino' , 262], ['Puli' , 263], ['Pumi' , 264], ['Rafeiro do Alentejo' , 265], ['Ratonero Bodeguero Andaluz' , 266], ['Retriever de Nueva Escocia' , 267], ['Rhodesian Ridgeback' , 268], ['Ridgeback de Tailandia' , 269], ['Rottweiler' , 270], ['Saarloos' , 271], ['Sabueso de Hamilton' , 272], ['Sabueso de Hannover' , 273], ['Sabueso de Hygen' , 274], ['Sabueso de Istria' , 275], ['Sabueso de Posavaz' , 276], ['Sabueso de Schiller (Schillerstovare)' , 277], ['Sabueso de Smaland (Smalandsstovare)' , 278], ['Sabueso de Transilvania' , 279], ['Sabueso del Tirol' , 280], ['Sabueso Español' , 281], ['Sabueso Estirio de pelo duro' , 282], ['Sabueso Finlandés' , 283], ['Sabueso Francés blanco y negro' , 284], ['Sabueso Francés tricolor' , 285], ['Sabueso Griego' , 286], ['Sabueso Polaco (Ogar Polski)' , 287], ['Sabueso Serbio' , 288], ['Sabueso Suizo' , 289], ['Sabueso Yugoslavo de Montaña' , 290], ['Sabueso Yugoslavo tricolor' , 291], ['Saluki' , 292], ['Samoyedo' , 293], ['San Bernardo' , 294], ['Sarplaninac' , 295], ['Schapendoes' , 296], ['Schipperke' , 297], ['Schnauzer' , 298], ['Schnauzer gigante (Riesenschnauzer)' , 299], ['Scnnzuzer miniatura' , 300], ['Scottish terrier' , 301], ['Sealyham terrier' , 302], ['Segugio Italiano' , 303], ['Seppala Siberiano' , 304], ['Setter Inglés' , 305], ['Setter Irlandés' , 306], ['Setter Irlandés rojo y blanco' , 307], ['Shar Pei' , 308], ['Shiba Inu' , 309], ['Shih Tzu' , 310], ['Shikoku' , 311], ['Skye terrier' , 312], ['Slovensky Cuvac' , 313], ['Slovensky Kopov' , 314], ['Smoushond Holandés' , 315], ['Spaniel Alemán (German Wachtelhund)' , 316], ['Spaniel Azul de Picardía' , 317], ['Spaniel Bretón' , 318], ['Spaniel continental enano' , 319], ['Spaniel de Campo' , 320], ['Spaniel de Pont Audemer' , 321], ['Spaniel Francés' , 322], ['Spaniel japonés' , 323], ['Spaniel tibetano' , 324], ['Spinone Italiano' , 325], ['Spítz Alemán' , 326], ['Spitz de Norbotten (Norbottenspets)' , 327], ['Spitz Finlandés' , 328], ['Spitz Japonés' , 329], ['Staffordshire bull terrier' , 330], ['Staffordshire terrier americano' , 331], ['Sussex Spaniel' , 332], ['Tchuvatch eslovaco' , 333], ['Teckel (Dachshund)' , 334], ['Terranova (Newfoundland)' , 335], ['Terrier australiano (Australian terrier)' , 336], ['Terrier brasilero' , 337], ['Terrier cazador alemán' , 338], ['Terrier checo (Ceský teriér)' , 339], ['Terrier galés' , 340], ['Terrier irlandés (Irish terrier)' , 341], ['Terrier japonés (Nihon teria)' , 342], ['Terrier negro ruso' , 343], ['Terrier tibetano' , 344], ['Tosa' , 345], ['Viejo Pastor Inglés' , 346], ['Viejo Pointer Danés (Old Danish Pointer)' , 347], ['Vizsla' , 348], ['Volpino Italiano' , 349], ['Weimaraner' , 350], ['Welsh Corgi Cardigan' , 351], ['Welsh Corgi Pembroke' , 352], ['Welsh springer spaniel' , 353], ['Welsh terrier' , 354], ['West highland white terrier' , 355], ['Whippet' , 356], ['Wirehaired solvakian pointer' , 357], ['Xoloitzcuintle' , 358], ['Yorkshire terrier' , 359]
+
+
+   ])) %>
+    
+  </div>
+  <div class="field">
+    <%= f.label :age %><br>
+     <%= select_tag(:age, options_for_select([['Menos de un año' , 1],['1 año' , 2],['2 años' , 3],['3 años' , 4],['4 años' , 5],['5 años' , 6],['6 años' , 7],['7 años' , 8],['8 años' , 9],['9 años' , 10],['10 años' , 11],['11 años' , 12],['12 años' , 13],['13 años' , 14],['14 años' , 15],
+    ])) %>
+
+  </div>
+  <div class="field">
+    <%= f.label :size %><br>
+      <%= select_tag(:size, options_for_select([['Pequeño' , 1],['Mediano' , 2],['Grande' , 3]
+
+    ])) %>
+  </div>
+  <div class="field">
+    <%= f.label :nextperiod %><br>
+    <%= select_tag(:nextperiod, options_for_select([ ['Ahora' , 1],['1 Semana' , 2],['2 Semanas' , 3],['3 Semanas' , 4],['1 Mes' , 5],['2 Meses' , 6],['3 Meses' , 7],['4 Meses' , 8],['5 Meses' , 9],['6 Meses' , 10]
+
+    ])) %>
+  </div>
+  
+  <div class="field">
+    <%= f.label :description %><br>
+    <%= f.text_area :description %>
   </div>
   <div class="field">
     <%= f.label :photo %><br>
     <%= f.text_field :photo %>
   </div>
   <div class="field">
-    <%= f.label :nextperiod %><br>
-    <%= f.text_field :nextperiod %>
-  </div>
-  <div class="field">
     <%= f.label :user_id %><br>
-    <%= f.text_field :user_id %>
+    <%= hidden_field_tag :user_id %>
   </div>
   <div class="actions">
     <%= f.submit %>

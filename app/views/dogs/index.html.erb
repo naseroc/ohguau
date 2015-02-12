@@ -1,39 +1,39 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Listing Dogs</h1>
+<h1>Perritos Disponibles</h1>
 
-<table>
+<table class="table">
   <thead>
     <tr>
-      <th>Name</th>
-      <th>Breed</th>
-      <th>Age</th>
-      <th>Size</th>
-      <th>Sex</th>
-      <th>Description</th>
-      <th>City</th>
-      <th>Commune</th>
-      <th>Photo</th>
-      <th>Nextperiod</th>
-      <th>User</th>
+      <th>Nombre</th>
+      <th>Ciudad</th>
+      <th>Comuna</th>
+       <th>Genero</th>
+      <th>Raza</th>
+      <th>Edad</th>
+      <th>Tamaño</th>
+      <th>Siguiente Periodo</th>
+      <th>Descripción</th>
+      <th>Foto</th>
+      <!-- <th>User</th> -->
       <th colspan="3"></th>
     </tr>
   </thead>
 
-  <tbody>
+  <tbody >
     <% @dogs.each do |dog| %>
       <tr>
         <td><%= dog.name %></td>
+        <td><%= dog.city %></td>
+        <td><%= dog.commune %></td>
+        <td><%= dog.sex %></td>
         <td><%= dog.breed %></td>
         <td><%= dog.age %></td>
         <td><%= dog.size %></td>
-        <td><%= dog.sex %></td>
-        <td><%= dog.description %></td>
-        <td><%= dog.city %></td>
-        <td><%= dog.commune %></td>
-        <td><%= image_tag(dog.photo, size:"80") %></td>
         <td><%= dog.nextperiod %></td>
-        <td><%= dog.user %></td>
+        <td><%= dog.description %></td>
+        <td><%= image_tag(dog.photo, size:"80") %></td>
+        <!-- <td><%= dog.user %></td> -->
         <td><%= link_to 'Show', dog %></td>
         <td><%= link_to 'Edit', edit_dog_path(dog) %></td>
         <td><%= link_to 'Destroy', dog, method: :delete, data: { confirm: 'Are you sure?' } %></td>
