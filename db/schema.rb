@@ -11,9 +11,21 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150213125125) do
+ActiveRecord::Schema.define(version: 20150213162545) do
+
+  create_table "ages", force: :cascade do |t|
+    t.string   "name"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
 
   create_table "breeds", force: :cascade do |t|
+    t.string   "name"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "cities", force: :cascade do |t|
     t.string   "name"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
@@ -25,7 +37,6 @@ ActiveRecord::Schema.define(version: 20150213125125) do
     t.string   "size"
     t.string   "sex"
     t.text     "description"
-    t.string   "city"
     t.string   "commune"
     t.string   "photo"
     t.string   "nextperiod"
@@ -33,9 +44,13 @@ ActiveRecord::Schema.define(version: 20150213125125) do
     t.datetime "created_at",  null: false
     t.datetime "updated_at",  null: false
     t.integer  "breed_id"
+    t.integer  "city_id"
+    t.integer  "age_id"
   end
 
+  add_index "dogs", ["age_id"], name: "index_dogs_on_age_id"
   add_index "dogs", ["breed_id"], name: "index_dogs_on_breed_id"
+  add_index "dogs", ["city_id"], name: "index_dogs_on_city_id"
   add_index "dogs", ["user_id"], name: "index_dogs_on_user_id"
 
   create_table "sexes", force: :cascade do |t|

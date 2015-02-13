@@ -6,9 +6,8 @@
   <thead>
     <tr>
       <th>Nombre</th>
-      <th>Ciudad</th>
-      <th>Comuna</th>
-       <th>Genero</th>
+      <th>Ciudad o Comuna</th>
+      <th>Genero</th>
       <th>Raza</th>
       <th>Edad</th>
       <th>Tamaño</th>
@@ -24,11 +23,10 @@
     <% @dogs.each do |dog| %>
       <tr>
         <td><%= dog.name %></td>
-        <td><%= dog.city %></td>
-        <td><%= dog.commune %></td>
+        <td><%= dog.city.name %></td>
         <td><%= dog.sex %></td>
-        <td><%= dog.breed %></td>
-        <td><%= dog.age %></td>
+        <td><%= dog.breed.name %></td>
+        <td><%= dog.age.name %></td>
         <td><%= dog.size %></td>
         <td><%= dog.nextperiod %></td>
         <td><%= dog.description %></td>
@@ -36,7 +34,7 @@
         <!-- <td><%= dog.user %></td> -->
         <td><%= link_to 'Show', dog %></td>
         <td><%= link_to 'Edit', edit_dog_path(dog) %></td>
-        <td><%= link_to 'Destroy', dog, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'Destroy', dog, method: :delete, data: { confirm: '¿Estas seguro?' } %></td>
       </tr>
     <% end %>
   </tbody>

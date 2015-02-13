@@ -1,52 +1,47 @@
 <p id="notice"><%= notice %></p>
 
 <p>
-  <strong>Name:</strong>
+  <strong>Nombre:</strong>
   <%= @dog.name %>
 </p>
 
 <p>
-  <strong>Breed:</strong>
+  <strong>Raza:</strong>
   <%= @dog.breed.name %>
 </p>
 
 <p>
-  <strong>Age:</strong>
-  <%= @dog.age %>
+  <strong>Edad:</strong>
+  <%= @dog.age.name %>
 </p>
 
 <p>
-  <strong>Size:</strong>
+  <strong>Tamaño:</strong>
   <%= @dog.size %>
 </p>
 
 <p>
-  <strong>Sex:</strong>
+  <strong>Genero:</strong>
   <%= @dog.sex %>
 </p>
 
 <p>
-  <strong>Description:</strong>
+  <strong>Descripción:</strong>
   <%= @dog.description %>
 </p>
 
 <p>
-  <strong>City:</strong>
-  <%= @dog.city %>
+  <strong>Ciudad o Comuna:</strong>
+  <%= @dog.city.name %>
 </p>
 
 <p>
-  <strong>Commune:</strong>
-  <%= @dog.commune %>
-</p>
-
-<p>
-  <strong>Photo:</strong>
+  <strong>Foto:</strong>
   <%=image_tag(@dog.photo)%>
 </p>
 
 <p>
-  <strong>Nextperiod:</strong>
+  <strong>Disponibilidad:</strong>
   <%= @dog.nextperiod %>
 </p>
 

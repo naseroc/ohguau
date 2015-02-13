@@ -29,4 +29,27 @@ Breed.destroy_all
 # end
 breed.map{|b| Breed.create(name: b.first)} 
 
-Breed.map{|b| [b.name, b.id]}
+
+City.destroy_all
+
+city = [
+	
+['Ancud' , 1], ['Angol' , 2], ['Antofagasta' , 3], ['Arauco' , 4], ['Arica' , 5], ['Buin' , 6], ['Bulnes' , 7], ['Cabrero' , 8], ['Calama' , 9], ['Calbuco' , 10], ['Cañete' , 11], ['Carahue' , 12], ['Castro' , 13], ['Cauquenes' , 14], ['Cerrillos' , 15], ['Cerro Navia' , 16], ['Chiguayante' , 17], ['Chillán' , 18], ['Chimbarongo' , 19], ['Coihaique' , 20], ['Coihueco' , 21], ['Collipulli' , 22], ['Concepción' , 23], ['Conchalí' , 24], ['Constitución' , 25], ['Copiapó' , 26], ['Coquimbo' , 27], ['Coronel' , 28], ['Curanilahue' , 29], ['Curicó' , 30], ['Diego de Almagro' , 31], ['El Bosque' , 32], ['El Monte' , 33], ['Estación Central' , 34], ['Freire' , 35], ['Graneros' , 36], ['Hacienda La Calera' , 37], ['Huechuraba' , 38], ['Illapel' , 39], ['Illapel' , 39], ['Independencia' , 40], ['Iquique' , 41], ['La Cisterna' , 42], ['La Florida' , 43], ['La Granja' , 44], ['La Laja' , 45], ['La Ligua' , 46], ['La Pintana' , 47], ['La Reina' , 48], ['La Serena' , 49], ['La Unión' , 50], ['Lampa' , 51], ['Las Animas' , 52], ['Las Condes' , 53], ['Lautaro' , 54], ['Lebu' , 55], ['Limache' , 56], ['Linares' , 57], ['Llaillay' , 58], ['Lo Barnechea' , 59], ['Lo Espejo' , 60], ['Lo Prado' , 61], ['Loncoche' , 62], ['Longaví' , 63], ['Los Andes' , 64], ['Los Ángeles' , 65], ['Lota' , 66], ['Machalí' , 67], ['Macul' , 68], ['Maipú' , 69], ['Melipilla' , 70], ['Molina' , 71], ['Monte Patria' , 72], ['Mulchén' , 73], ['Nacimiento' , 74], ['Nueva Imperial' , 75], ['Ñuñoa' , 76], ['Osorno' , 77], ['Ovalle' , 78], ['Paine' , 79], ['Panguipulli' , 80], ['Parral' , 81], ['Pedro Aguirre Cerda' , 82], ['Penco' , 83], ['Peñaflor' , 84], ['Peñalolén' , 85], ['Pitrufquén' , 86], ['Providencia' , 87], ['Pudahuel' , 88], ['Puerto Montt' , 89], ['Puerto Natales' , 90], ['Puerto Varas' , 91], ['Punta Arenas' , 92], ['Purranque' , 93], ['Quilicura' , 94], ['Quillota' , 95], ['Quilpué' , 96], ['Quinta Normal' , 97], ['Rancagua' , 98], ['Recoleta' , 99], ['Renca' , 100], ['Rengo' , 101], ['Río Bueno' , 102], ['Salamanca' , 103], ['San Antonio' , 104], ['San Bernardo' , 105], ['San Carlos' , 106], ['San Clemente' , 107], ['San Felipe' , 108], ['San Javier' , 109], ['San Joaquín' , 110], ['San Miguel' , 111], ['San Ramón' , 112], ['San Vicente' , 113], ['Santa Cruz' , 114], ['Santiago Ciudad' , 115], ['Santiago Comuna' , 116], ['Talagante' , 117], ['Talca' , 118], ['Talcahuano' , 119], ['Taltal' , 120], ['Temuco' , 121], ['Teno' , 122], ['Tocopilla' , 123], ['Tomé' , 124], ['Traiguén' , 125], ['Valdivia' , 126], ['Vallenar' , 127], ['Valparaíso' , 128], ['Victoria' , 129], ['Vicuña' , 130], ['Vilcún' , 131], ['Villa Alemana' , 132], ['Villarrica' , 133], ['Viña Causiño' , 134], ['Viña del Mar' , 135], ['Vitacura' , 136], ['Yumbel' , 137], 
+
+]
+
+city.map{|b| City.create(name: b.first)} 
+
+age = [
+['Menos de un año' , 1],['1 año' , 2],['2 años' , 3],['3 años' , 4],['4 años' , 5],['5 años' , 6],['6 años' , 7],['7 años' , 8],['8 años' , 9],['9 años' , 10],['10 años' , 11],['11 años' , 12],['12 años' , 13],['13 años' , 14],['14 años' , 15]
+]
+
+age.map{|b| Age.create(name: b.first)}
+
+
+
+
+
+
+
+
