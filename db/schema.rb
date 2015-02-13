@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150212165819) do
+ActiveRecord::Schema.define(version: 20150213125125) do
 
   create_table "breeds", force: :cascade do |t|
     t.string   "name"
@@ -21,7 +21,6 @@ ActiveRecord::Schema.define(version: 20150212165819) do
 
   create_table "dogs", force: :cascade do |t|
     t.string   "name"
-    t.string   "breed"
     t.integer  "age"
     t.string   "size"
     t.string   "sex"
@@ -33,9 +32,17 @@ ActiveRecord::Schema.define(version: 20150212165819) do
     t.integer  "user_id"
     t.datetime "created_at",  null: false
     t.datetime "updated_at",  null: false
+    t.integer  "breed_id"
   end
 
+  add_index "dogs", ["breed_id"], name: "index_dogs_on_breed_id"
   add_index "dogs", ["user_id"], name: "index_dogs_on_user_id"
+
+  create_table "sexes", force: :cascade do |t|
+    t.string   "name"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
 
   create_table "users", force: :cascade do |t|
     t.string   "email",                  default: "", null: false
