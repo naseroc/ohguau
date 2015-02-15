@@ -6,7 +6,10 @@ Rails.application.routes.draw do
 
   get 'interactions/show'
 
-  resources :dogs do
+  get '/mydogs' => 'dogs#mydogs'
+
+
+  resources :dogs do  #Esto es para capturar el dog_id al hacer like
     resources :interactions, only:[:new]
   end
 

@@ -21,14 +21,19 @@ class DogsController < ApplicationController
   def edit
   end
 
+  def mydogs
+    @mydogs = current_user.dogs
+  end
+
   # POST /dogs
   # POST /dogs.json
   def create
     @dog = Dog.new(dog_params)
+    @dog.user_id = current_user.id
 
     respond_to do |format|
       if @dog.save
-        format.html { redirect_to @dog, notice: 'Dog was successfully created.' }
+        format.html { redirect_to  mydogs_path, notice: 'Dog was successfully created.' }
         format.json { render :show, status: :created, location: @dog }
       else
         format.html { render :new }
@@ -42,7 +47,7 @@ class DogsController < ApplicationController
   def update
     respond_to do |format|
       if @dog.update(dog_params)
-        format.html { redirect_to @dog, notice: 'Dog was successfully updated.' }
+        format.html { redirect_to mydogs_path, notice: 'Dog was successfully updated.' }
         format.json { render :show, status: :ok, location: @dog }
       else
         format.html { render :edit }
