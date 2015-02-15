@@ -1,6 +1,14 @@
 Rails.application.routes.draw do
  
-  resources :dogs
+  get 'interactions/new'
+
+  get 'interactions/create'
+
+  get 'interactions/show'
+
+  resources :dogs do
+    resources :interactions, only:[:new]
+  end
 
   devise_for :users
   # The priority is based upon order of creation: first created -> highest priority.
