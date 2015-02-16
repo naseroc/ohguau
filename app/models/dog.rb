@@ -5,4 +5,8 @@ class Dog < ActiveRecord::Base
   belongs_to :age
   has_many :interactions, :foreign_key => :mydog_id
 
+
+  #scope :opposite_sex, -> {where.not(sex:)}
+
+
 end

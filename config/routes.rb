@@ -8,9 +8,11 @@ Rails.application.routes.draw do
 
   get '/mydogs' => 'dogs#mydogs'
 
+  get 'tomatch/:id' => 'dogs#tomatch', as: :tomatch
 
-  resources :dogs do  #Esto es para capturar el dog_id al hacer like
-    resources :interactions, only:[:new]
+
+  resources :dogs do  #Esto es para capturar el otherdog_id al que se hace like
+    resources :interactions, only:[:new, :create]
   end
 
   devise_for :users

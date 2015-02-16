@@ -1,5 +1,6 @@
 class DogsController < ApplicationController
   before_action :set_dog, only: [:show, :edit, :update, :destroy]
+  before_action :authenticate_user!
 
   # GET /dogs
   # GET /dogs.json
@@ -23,6 +24,14 @@ class DogsController < ApplicationController
 
   def mydogs
     @mydogs = current_user.dogs
+  end
+
+  def tomatch
+    @user = current_user
+    @mydog = Dog.find(params[:id])
+    if @user != @mydog.user
+      redirect_to mydogs_path, notice: "No eres dueño del perro para hacer esta acción"
+    end
   end
 
   # POST /dogs
