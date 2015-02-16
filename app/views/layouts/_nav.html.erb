@@ -18,7 +18,11 @@
                 <li class="dropdown">
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><%= current_user.email %><span class="caret"></span></a>
                     <ul class="dropdown-menu" role="menu">
+                        <% if current_user.dogs.size == 0%>
                         <li><%= link_to 'Agregar perro', new_dog_path %></li>
+                        <% else %>
+                        <li><%= link_to 'Mis perros', mydogs_path %></li>
+                        <% end %>
                         <li><%= link_to 'Editar perfil', edit_user_registration_path %></li>
                         <li class="divider"></li>
                         <li><%= link_to "Logout", destroy_user_session_path, method: :delete %></li>

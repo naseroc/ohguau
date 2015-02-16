@@ -1,5 +1,19 @@
 <p id="notice"><%= notice %></p>
+<div class="row">
+<div class="col-md-2">
+  <p id="notice"><%= notice %></p>
 
+<h3>Cambia de perro<h3>
+    <% @mydogs.each do |dog| %>
+    <% if dog != @mydog %>
+    <a href="<%= tomatch_path(dog)%>" title="Emparejar"> 
+        <%= dog.name %>
+        <%= image_tag(dog.photo, :class =>'img-responsive', size:'40')%>
+        </a>
+    <% end %>   
+    <% end %>
+</div>
+<div class="col-md-10">
 <h1>Buscando pareja a <%= @mydog.name %></h1>
 
 <table class="table">
@@ -34,5 +48,4 @@
       </tr>
   </tbody>
 </table>
-
-<br>
+</div>
