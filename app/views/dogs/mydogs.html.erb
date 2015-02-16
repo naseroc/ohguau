@@ -31,7 +31,8 @@
         <td><%= dog.nextperiod %></td>
         <td><%= dog.description %></td>
         <td><%= image_tag(dog.photo, size:"80") %></td>
-        <td><%= link_to 'Buscar pareja', tomatch_path(dog) %></td>
+        <td><%= link_to 'Buscar pareja', tomatch_path(dog) %> | <%= link_to 'Edit', edit_dog_path(dog) %></td>
+
         <!-- <td><%= dog.user %></td> -->
        
       </tr>

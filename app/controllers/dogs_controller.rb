@@ -30,6 +30,7 @@ class DogsController < ApplicationController
     @user = current_user
     @mydog = Dog.find(params[:id])
     @mydogs = current_user.dogs
+    @otherdog = Dog.where.not(sex: @mydog.sex).where(breed: @mydog.breed).where.not(user: @mydog.user).first
     if @user != @mydog.user
       redirect_to mydogs_path, notice: "No eres dueño del perro para hacer esta acción. Elige uno de los que te pertenecen."
     end

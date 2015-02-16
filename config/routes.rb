@@ -1,10 +1,10 @@
 Rails.application.routes.draw do
  
-  get 'interactions/new'
+ # get 'interactions/new'
 
-  get 'interactions/create'
+  #get 'interactions/create'
 
-  get 'interactions/show'
+  #get 'interactions/show'
 
   get '/mydogs' => 'dogs#mydogs'
 
