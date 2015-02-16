@@ -28,18 +28,29 @@ class DogsController < ApplicationController
 
   def tomatch
     @user = current_user
+    
     @mydog = Dog.find(params[:id])
     @mydogs = current_user.dogs
-    @otherdog = Dog.where.not(sex: @mydog.sex).where(breed: @mydog.breed).where.not(user: @mydog.user).first
-    if @user != @mydog.user
-      redirect_to mydogs_path, notice: "No eres dueño del perro para hacer esta acción. Elige uno de los que te pertenecen."
+    @otherdogs = Dog.where.not(sex: @mydog.sex).where(breed: @mydog.breed).where.not(user: @mydog.user)
+
+    @otherdogs.each do |d|
+      if @mydog.interactions.where.not(otherdog_id: d).last == true
+      @otherdog = d
+      break
+      end
     end
+
+  #  @otherdog = Dog.where.not(sex: @mydog.sex).where(breed: @mydog.breed).where.not(user: @mydog.user).first
+  #  if @user != @mydog.user
+  #    redirect_to mydogs_path, notice: "No eres dueño del perro para hacer esta acción. Elige uno de los que te pertenecen."
+  #  end
   end
 
 
   def yesmatch
     @mydog = Dog.find(params[:mydog_id])
     @otherdog = Dog.find(params[:otherdog_id])
+
     @mydog.interactions.create(otherdog_id: @otherdog.id, like:1)
     redirect_to tomatch_path(@mydog)
   end
