@@ -36,7 +36,7 @@
       <div class="caption">
         <h3><%= @otherdog.name %></h3>
         <p><%= @otherdog.description %></p>
-        <p><a href="#" class="btn btn-primary" role="button">Desechar</a> <a href="#" class="btn btn-default" role="button">Corazón</a></p>
+        <p><a href="<%= yesmatch_path(@mydog.id, @otherdog.id)%>" class="btn btn-primary" role="button">Aceptar</a> <a href="<%= notmatch_path(@mydog.id, @otherdog.id)%>" class="btn btn-default" role="button">Rechazar</a></p>
       </div>
     </div>
   </div>

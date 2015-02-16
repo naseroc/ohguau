@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
- 
+
  # get 'interactions/new'
 
   #get 'interactions/create'
@@ -10,10 +10,14 @@ Rails.application.routes.draw do
 
   get 'tomatch/:id' => 'dogs#tomatch', as: :tomatch
 
+  get 'tomatch/:mydog_id/:otherdog_id' => 'dogs#yesmatch', as: :yesmatch
 
-  resources :dogs do  #Esto es para capturar el otherdog_id al que se hace like
-    resources :interactions, only:[:new, :create]
-  end
+  get 'tomatch/:mydog_id/:otherdog_id' => 'dogs#notmatch', as: :notmatch
+
+
+resources :dogs
+
+resources :interactions, only:[:new]
 
   devise_for :users
   # The priority is based upon order of creation: first created -> highest priority.

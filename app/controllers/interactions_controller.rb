@@ -1,10 +1,10 @@
 class InteractionsController < ApplicationController
   def new
+  	
   end
 
-  def create
+  def destroy
+
   end
 
-  def show
-  end
 end

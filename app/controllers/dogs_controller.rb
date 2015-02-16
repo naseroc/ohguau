@@ -36,6 +36,21 @@ class DogsController < ApplicationController
     end
   end
 
+
+  def yesmatch
+    @mydog = Dog.find(params[:mydog_id])
+    @otherdog = Dog.find(params[:otherdog_id])
+    @mydog.interactions.create(otherdog_id: @otherdog.id, like:1)
+    redirect_to tomatch_path(@mydog)
+  end
+
+   def notmatch
+    @mydog = Dog.find(params[:mydog_id])
+    @otherdog = Dog.find(params[:otherdog_id])
+    @mydog.interaction.create(otherdog_id: @otherdog.id, like:0)
+    redirect_to tomatch_path(@mydog)
+  end
+
   # POST /dogs
   # POST /dogs.json
   def create
